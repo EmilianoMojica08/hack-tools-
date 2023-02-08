@@ -7,13 +7,13 @@ def push(key):
 
 def out(key):
      key1=convert(key)
-    print("tecla liberada: {}".format(key1))
-    if str(key) == "key.esc":
+     print("tecla liberada: {}".format(key1))
+     if str(key) == "key.esc":
         print("saliendo....")
         return False
 
 def convert(key):
-    if isintance(key,pynput.keyboard.KeyCode):
+    if iinstance(key,pynput.keyboard.KeyCode):
         return str(key)
     else:
         return str(key)
@@ -22,4 +22,4 @@ def convert(key):
 with pynput.keyboard.Listener(on_press=push,on_release=out) as listen:
     listen.join()
 
-    
+    "Notes: i fixed the compilation problem, in the 16 line it was mispelled isinstance "
