@@ -13,11 +13,10 @@ def out(key):
         return False
 
 def convert(key):
-    if iinstance(key,pynput.keyboard.KeyCode):
+    if isinstance(key,pynput.keyboard.KeyCode):     
         return str(key)
     else:
-        return str(key)
-
+        return str(key) 
 
 with pynput.keyboard.Listener(on_press=push,on_release=out) as listen:
     listen.join()
